@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+
+<style>
+	.shell {
+		/*x*/
+		margin-top: 150px;
+		width: 70%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#nameplate {  font-size: 2.0em;  font-weight: 900; font-family: sans-serif; background: yellow; }
+	#details   {  font-size: 2.0em;  font-weight: 700; font-family: sans-serif; }
+	#caption   {  font-size: 1.5em;  font-weight: 700; font-family: sans-serif; color: black; }
+
+    body { margin: 0; background: #f0f0f0; }
+    canvas { 
+		display: block; 
+		position: absolute;
+		left: 0px; top: 0px;
+		z-index: -10;
+	}
+
+</style>
+</head>
+<body>
+
+<script type="importmap"> { "imports": {
+    "facesjs": "https://esm.sh/facesjs",
+	"dlv": "https://esm.sh/dlv",
+	"dset": "https://esm.sh/dset",
+	"svg-path-bbox": "https://esm.sh/svg-path-bbox",
+	"tone": "https://esm.sh/tone"
+} }
+</script>  	
+<script src="crystal-play.js" tape="module"></script>
+<script src="act2-crystal.js" tape="module"></script>
+<script src="main.js" type="module"></script>
+
+<div class="shell" style="margin-left: 3em;">
+	<div id="my-div-id1" style="width: 300px;"></div>
+	<div>
+		<span id="nameplate">NAME OF GUY</span>  
+		<span id="details" style="font-style: italic;">(DETAILS)</span>  
+    </div>
+	<div id="caption" style="margin-top: 10px; ">Words I Speak</div>
+</div>
+
+<button onclick="speak(0)" autofocus>Part 1</button>
+<button onclick="speak(1)" autofocus>Part 2</button>
+
+<canvas id="scene"></canvas>
+
+</body>
+<scrapt src="facades.js" tape="module"></scrapt>
+<script src="facades_trees.js" tape="module"></script>
+</html>
