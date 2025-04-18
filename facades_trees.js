@@ -9,15 +9,13 @@ const bushGreens = ['#8fbc8f', '#A1DAB3', '#C3D89D'];
 
 function drawScene() {
   //const groundY = canvas.height - 100;
-  const groundY = canvas.height - 300;
+  const groundY = canvas.height - 300; console.log('groundY:', groundY);
+  const skyColor = '#f0f6e6'; //const skyColor0 = '#d0e6f6';
 
-  const skyColor0 = '#d0e6f6';
-  const skyColor = '#f0f6e6';
-  ctx.fillStyle = skyColor; //'#d0e6f6';
+  ctx.fillStyle = skyColor; 
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // First, draw trees (behind houses)
-  drawTrees(groundY);
+  drawTrees(groundY); // First, draw trees (behind houses)
 
   // Then, draw houses in the foreground
   const numBuildings = Math.floor(canvas.width / 150);
@@ -28,8 +26,7 @@ function drawScene() {
     drawBuilding(x, groundY - height, width, height);
   }
 
-  // Finally, draw bushes (in front of houses)
-  drawBushes(groundY);
+  drawBushes(groundY); // Finally, draw bushes (in front of houses)
 }
 
 function drawTrees(groundY) {
@@ -40,9 +37,9 @@ function drawTrees(groundY) {
     const scale = (1.5 + Math.random() * 0.5) * 1.5; // 150% bigger than before
     const trunkBottomY = groundY - (Math.random() * 20 + 10); // varies 10–30px above house ground
 
-    if (treeType < 0.4) drawRoundTree(treeX, trunkBottomY, scale);
-    else if (treeType < 0.7) drawPineTree(treeX, trunkBottomY, scale);
-    else drawLollipopTree(treeX, trunkBottomY, scale);
+    if (treeType < 0.4)      drawRoundTree(   treeX, trunkBottomY, scale);
+    else if (treeType < 0.7) drawPineTree(    treeX, trunkBottomY, scale);
+    else                     drawLollipopTree(treeX, trunkBottomY, scale);
 
     x += 30 + Math.random() * 20;
   }

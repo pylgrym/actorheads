@@ -1,20 +1,19 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-
+	<meta name="viewport" content="width=device-width">
 <style>
 	.shell {
-		/*x*/
-		margin-top: 150px;
-		width: 70%;
+		width: 70vw;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
-	#nameplate {  font-size: 2.0em;  font-weight: 900; font-family: sans-serif; background: yellow; }
-	#details   {  font-size: 2.0em;  font-weight: 700; font-family: sans-serif; }
-	#caption   {  font-size: 1.5em;  font-weight: 700; font-family: sans-serif; color: black; }
+	#my-div-id1 {  height: 50vh; background:  rgba(250, 150, 50, 0.15);  }
+	#nameplate {  font-size: 1.5rem;  font-weight: 900; font-family: sans-serif; background: yellow; }
+	#details   {  font-size: 1.5em;  font-weight: 700; font-family: sans-serif; }
+	#caption   {  font-size: 1.2em;  font-weight: 700; font-family: sans-serif; color: black; }
 
     body { margin: 0; background: #f0f0f0; }
     canvas { 
@@ -41,7 +40,7 @@
 <script src="main.js" type="module"></script>
 
 <div class="shell" style="margin-left: 3em;">
-	<div id="my-div-id1" style="width: 300px;"></div>
+	<div id="my-div-id1"></div>
 	<div>
 		<span id="nameplate">NAME OF GUY</span>  
 		<span id="details" style="font-style: italic;">(DETAILS)</span>  
